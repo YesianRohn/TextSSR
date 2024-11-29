@@ -1,0 +1,9 @@
+lmdb
+transformers
+datasets
+accelerate
+mmengine
+timm
+opencv-python
+ujson
+Pillow==9.5
