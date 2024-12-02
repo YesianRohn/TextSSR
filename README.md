@@ -1,6 +1,6 @@
 # 🎰TextSSR: Diffusion-based Data Synthesis for Scene Text Recognition
 
-<a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href=''><img src='https://img.shields.io/badge/Page-Github-green'></a> <a href=''><img src='https://img.shields.io/badge/Demo&Model&Data-ModelScope-lightblue'></a> <a href=''><img src='https://img.shields.io/badge/Demo&Model&Data-HuggingFace-yellow'></a> 
+<a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href=''><img src='https://img.shields.io/badge/Page-Github-green'></a> <a href=''><img src='https://img.shields.io/badge/Demo&Model-ModelScope-lightblue'></a> <a href=''><img src='https://img.shields.io/badge/Ckpt&Data-ModelScope-yellow'></a> <a href=''><img src='https://img.shields.io/badge/GenData-ModelScope-orange'></a> 
 
 <div style="text-align: left;">
 <img src="./imgs/intro.svg" alt="Intro Image">
@@ -163,7 +163,7 @@ TextSSR/
 
 ## 🔍 Inference
 
-- Ensure the `bench` path is correctly set in `infer.py`.
+- Ensure the `benchmark` path is correctly set in `infer.py`.
 - Run the inference process with:
    ```bash
    python infer.py
