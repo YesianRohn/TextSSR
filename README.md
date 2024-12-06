@@ -13,8 +13,10 @@ $$
 
 ## 📢News
 
-[2024.12.05] - The [training  dataset](https://www.modelscope.cn/datasets/Yesianrohn/AnyWord-lmdb) and [generative dataset](https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F) are released!
+[2024.12.05] - The [training  dataset](https://www.modelscope.cn/datasets/Yesianrohn/AnyWord-lmdb) and [generative dataset](https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F) are released!  
+
 [2024.12.04] - We released the latest model and online demo, check on [ModelScope](https://www.modelscope.cn/models/Yesianrohn/TextSSR).
+
 [2024.12.03] - Our paper is available at [here](https://arxiv.org/abs/2412.01137).
 
 
