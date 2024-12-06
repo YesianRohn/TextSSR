@@ -1,6 +1,6 @@
 # 🎰TextSSR: Diffusion-based Data Synthesis for Scene Text Recognition
 
-<a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href=''><img src='https://img.shields.io/badge/Page-Github-green'></a> <a href=''><img src='https://img.shields.io/badge/Demo&Model-ModelScope-lightblue'></a> <a href=''><img src='https://img.shields.io/badge/Ckpt&Data-ModelScope-yellow'></a> <a href=''><img src='https://img.shields.io/badge/GenData-ModelScope-orange'></a> 
+<a href='https://arxiv.org/abs/2412.01137'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://textssr.github.io/'><img src='https://img.shields.io/badge/Page-Github-green'></a> <a href='https://www.modelscope.cn/studios/Yesianrohn/TextSSR'><img src='https://img.shields.io/badge/Demo&Model-ModelScope-lightblue'></a> <a href='https://www.modelscope.cn/models/Yesianrohn/TextSSR'><img src='https://img.shields.io/badge/Ckpt-ModelScope-yellow'></a> <a href='https://www.modelscope.cn/datasets/Yesianrohn/AnyWord-lmdb'><img src='https://img.shields.io/badge/Data-ModelScope-purple'></a> <a href='https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F'><img src='https://img.shields.io/badge/GenData-ModelScope-orange'></a> 
 
 <div style="text-align: left;">
 <img src="./imgs/intro.svg" alt="Intro Image">
@@ -13,16 +13,18 @@ $$
 
 ## 📢News
 
-TBD
+[2024.12.05] - The [training  dataset](https://www.modelscope.cn/datasets/Yesianrohn/AnyWord-lmdb) and [generative dataset](https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F) are released!
+[2024.12.04] - We released the latest model and online demo, check on [ModelScope](https://www.modelscope.cn/models/Yesianrohn/TextSSR).
+[2024.12.03] - Our paper is available at [here](https://arxiv.org/abs/2412.01137).
 
 
 
 ## 📝TODOs
 
-- [ ] Provide publicly checkpoints and gradio demo
+- [x] Provide publicly checkpoints and gradio demo
 - [ ] Release TextSSR-benchmark dataset and evaluation code
-- [ ] Release processed AnyWord-lmdb dataset 
-- [ ] Release our scene text synthesis dataset, TextSSR-F
+- [x] Release processed AnyWord-lmdb dataset 
+- [x] Release our scene text synthesis dataset, TextSSR-F
 - [x] Release training and inference code
 
 
@@ -183,7 +185,12 @@ TBD
 ## 🔗Citation
 
 ```
-TBD
+@article{ye2024textssr,
+  title={TextSSR: Diffusion-based Data Synthesis for Scene Text Recognition},
+  author={Ye, Xingsong and Du, Yongkun and Tao, Yunbo and Chen, Zhineng},
+  journal={arXiv preprint arXiv:2412.01137},
+  year={2024}
+}
 ```
 
 
