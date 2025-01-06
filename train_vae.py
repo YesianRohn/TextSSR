@@ -46,10 +46,6 @@ def parse_cfgs():
     if env_local_rank != -1 and env_local_rank != cfgs.local_rank:
         cfgs.local_rank = env_local_rank
 
-    # Sanity checks
-    if cfgs.json_path is None:
-        raise ValueError("Need json paths.")
-
     # default to using the same revision for the non-ema model if not specified
     if cfgs.non_ema_revision is None:
         cfgs.non_ema_revision = cfgs.revision
