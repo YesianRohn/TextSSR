@@ -102,32 +102,50 @@ class AnyWordLmdbDataset(Dataset):
             transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))
         ])
         random.seed(seed)
-        self.env = lmdb.open(lmdb_path, readonly=True, lock=False)
-        self.txn = self.env.begin(write=False)
-        self.index_list = [] 
+        self.lmdb_sets = self.load_hierarchical_lmdb_dataset(lmdb_path)
+        self.index_list = []
         self.build_index()
         self._length = len(self.index_list)
 
+    def load_hierarchical_lmdb_dataset(self, lmdb_path):
+        lmdb_sets = {}
+        dataset_idx = 0
+        for dirpath, dirnames, filenames in os.walk(lmdb_path):
+            if not dirnames and os.path.exists(os.path.join(dirpath, 'data.mdb')):
+                env = lmdb.open(
+                    dirpath,
+                    max_readers=32,
+                    readonly=True,
+                    lock=False,
+                    readahead=False,
+                    meminit=False,
+                )
+                txn = env.begin(write=False)
+                lmdb_sets[dataset_idx] = {
+                    'env': env,
+                    'txn': txn,
+                }
+                dataset_idx += 1
+        return lmdb_sets
+    
     def build_index(self):
+        for dataset_idx, dataset_info in self.lmdb_sets.items():
+            txn = dataset_info['txn']
+            cursor = txn.cursor()
+            with tqdm(desc=f"Building Index for Dataset {dataset_idx}") as pbar:
+                for key, value in cursor:
+                    if key.startswith(b'image-'):
+                        id = key.decode('utf-8').replace('image-', '')
+                        annotation_key = f'annotations-{id}'.encode('utf-8')
+                        annotations_bin = txn.get(annotation_key)
 
-        cursor = self.txn.cursor()
-        total_items = self.txn.stat()['entries'] 
-        with tqdm(total=total_items, desc="Building Index") as pbar:
-            for key, value in cursor:
-                if key.startswith(b'image-'):
-                    id = key.decode('utf-8').replace('image-', '')
-                    annotation_key = f'annotations-{id}'.encode('utf-8')
-                    annotations_bin = self.txn.get(annotation_key)
+                        if annotations_bin is None:
+                            continue
 
-                    if annotations_bin is None:
+                        annotations = json.loads(annotations_bin.decode('utf-8'))
+                        for sub_id in range(len(annotations)):
+                            self.index_list.append((dataset_idx, id, sub_id))
                         pbar.update(1)
-                        continue
-
-                    annotations = json.loads(annotations_bin.decode('utf-8'))
-                    for sub_id in range(len(annotations)):
-                        self.index_list.append((id, sub_id))
-                
-                pbar.update(1)
 
 
     def __len__(self):
@@ -141,13 +159,15 @@ class AnyWordLmdbDataset(Dataset):
         return img_pil
     
     def __getitem__(self, idx):
-        id, sub_id = self.index_list[idx]
+        dataset_idx, id, sub_id = self.index_list[idx]
+        dataset_info = self.lmdb_sets[dataset_idx]
+        txn = dataset_info['txn']
         
         image_key = f'image-{id}'.encode('utf-8')
         annotation_key = f'annotations-{id}'.encode('utf-8')
 
-        image_bin = self.txn.get(image_key)
-        annotations_bin = self.txn.get(annotation_key)
+        image_bin = txn.get(image_key)
+        annotations_bin = txn.get(annotation_key)
 
         image = self._decode_image(image_bin)
         annotations = json.loads(annotations_bin.decode('utf-8'))
