@@ -24,9 +24,9 @@ $$
 
 
 ## 📝TODOs
-
+- [ ] Release the expanded large-scale synthetic dataset TextSSR-F, which contains 3.55M text instances.
 - [x] Provide publicly checkpoints and gradio demo
-- [ ] Release TextSSR-benchmark dataset and evaluation code
+- [x] Release TextSSR-benchmark dataset and evaluation code
 - [x] Release processed AnyWord-lmdb dataset 
 - [x] Release our scene text synthesis dataset, TextSSR-F
 - [x] Release training and inference code
