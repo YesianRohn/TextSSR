@@ -24,6 +24,7 @@ $$
 
 
 ## 📝TODOs
+- [ ] Upload the new revised version of the manuscript
 - [ ] Release the expanded large-scale synthetic dataset TextSSR-F, which contains 3.55M text instances.
 - [x] Provide publicly checkpoints and gradio demo
 - [x] Release TextSSR-benchmark dataset and evaluation code
