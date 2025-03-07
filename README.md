@@ -15,7 +15,7 @@ $$
 
 [2025.02.13] - The [benchmark and evaluation code](https://github.com/TextSSR/eval) are available!  
 
-[2024.12.05] - The [training  dataset](https://www.modelscope.cn/datasets/Yesianrohn/AnyWord-lmdb) and generative dataset([v1](https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F) and [v2](https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F-v2.0)) are released!  
+[2024.12.05] - The [training  dataset](https://www.modelscope.cn/datasets/Yesianrohn/AnyWord-lmdb) and generative dataset([v1: 0.43m](https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F) and [v2: 3.55m](https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F-v2.0)) are released!  
 
 [2024.12.04] - We released the latest model and online demo, check on [ModelScope](https://www.modelscope.cn/models/Yesianrohn/TextSSR).
 
