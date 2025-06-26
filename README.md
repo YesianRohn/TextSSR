@@ -13,7 +13,7 @@ $$
 
 ## 📢News
 
-[2025.06.26] - This paper are accepted by ICCV2025 🎉!  
+[2025.06.26] - This paper has been accepted by ICCV2025 🎉!  
 
 [2025.02.13] - The [benchmark and evaluation code](https://github.com/TextSSR/eval) are available!  
 
