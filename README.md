@@ -1,4 +1,4 @@
-# 🎰TextSSR: Diffusion-based Data Synthesis for Scene Text Recognition
+# [ICCV2025]🎰TextSSR: Diffusion-based Data Synthesis for Scene Text Recognition
 
 <a href='https://arxiv.org/abs/2412.01137'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://textssr.github.io/'><img src='https://img.shields.io/badge/Page-Github-green'></a> <a href='https://www.modelscope.cn/studios/Yesianrohn/TextSSR'><img src='https://img.shields.io/badge/Demo&Model-ModelScope-lightblue'></a> <a href='https://www.modelscope.cn/models/Yesianrohn/TextSSR'><img src='https://img.shields.io/badge/Ckpt-ModelScope-yellow'></a> <a href='https://www.modelscope.cn/datasets/Yesianrohn/AnyWord-lmdb'><img src='https://img.shields.io/badge/Data-ModelScope-purple'></a> <a href='https://www.modelscope.cn/datasets/Yesianrohn/TextSSR-F'><img src='https://img.shields.io/badge/GenData-ModelScope-orange'></a> 
 
@@ -12,6 +12,8 @@ $$
 
 
 ## 📢News
+
+[2025.06.26] - This paper are accepted by ICCV2025 🎉!  
 
 [2025.02.13] - The [benchmark and evaluation code](https://github.com/TextSSR/eval) are available!  
 
