@@ -26,7 +26,7 @@ $$
 
 
 ## 📝TODOs
-- [ ] Upload the new revised version of the manuscript
+- [x] Upload the new revised version of the manuscript
 - [x] Release the expanded large-scale synthetic dataset TextSSR-F, which contains 3.55M text instances.
 - [x] Provide publicly checkpoints and gradio demo
 - [x] Release TextSSR-benchmark dataset and evaluation code
@@ -183,20 +183,20 @@ This will start the inference and generate the results.
 
 
 ## 📊Evaluation
-```
-TBD
-```
+See [here](https://github.com/TextSSR/eval).
 
 
 
 ## 🔗Citation
 
 ```
-@article{ye2024textssr,
-  title={TextSSR: Diffusion-based Data Synthesis for Scene Text Recognition},
-  author={Ye, Xingsong and Du, Yongkun and Tao, Yunbo and Chen, Zhineng},
-  journal={arXiv preprint arXiv:2412.01137},
-  year={2024}
+@InProceedings{Ye_2025_ICCV,
+    author    = {Ye, Xingsong and Du, Yongkun and Tao, Yunbo and Chen, Zhineng},
+    title     = {TextSSR: Diffusion-based Data Synthesis for Scene Text Recognition},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {17464-17473}
 }
 ```
 
